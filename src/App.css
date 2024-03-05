@@ -1,0 +1,8 @@
+/* root 스타일 지정 */
+
+/* Body 스타일 지정 */
+body{
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #fafafa;
+}

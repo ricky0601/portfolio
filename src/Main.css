@@ -1,0 +1,33 @@
+/* Main 스타일 지정 */
+.Main{
+    background-color: rgb(163, 163, 163);
+    padding-top: 93px;
+}
+
+.Main .Main_Header{
+    width: 1600px;
+    padding-top: 128px;
+    padding-bottom: 128px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Main .Main_Header .Main_Header_span{
+    font-size: 72pt;
+    font-weight: bolder;
+    color: white;
+    text-align: center;
+}
+
+.Main .Main_Main{
+    background-color: white;
+    width: 100%;
+    display: flex;
+}
+
+.Main .Main_Main .Main_Main_wrap{
+    width: 1600px;
+    margin: 0 auto;
+}
