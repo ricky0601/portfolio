@@ -20,9 +20,8 @@
     color: white;
     text-align: center;
 }
-
 .Main .Main_Main{
-    background-color: white;
+    background-color: rgb(163, 163, 163);
     width: 100%;
     display: flex;
 }
@@ -30,4 +29,47 @@
 .Main .Main_Main .Main_Main_wrap{
     width: 1600px;
     margin: 0 auto;
+}
+
+.Project_list{
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    min-height: 180px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .35s;
+    background-color: #fff;
+    box-shadow: 0 1px 1px 0 rgba(31,35,46,0.15);
+}
+
+.Project_list:hover {
+    transform: translate(0px, -2px);
+    box-shadow: 0 15px 45px -10px rgba(10,16,34,0.2);
+}
+
+.Project_thumb_wrap{
+    width: 400px;
+
+}
+
+.Project_info_wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Project_thumb{
+    display: block;
+    width: 400px;
+    height: 200px;
+    background-image: url(../public/img/project_thumb_1.png);
+    background-size: cover;
+}
+
+.Main #portfolio_list{
+    display: none;
 }
