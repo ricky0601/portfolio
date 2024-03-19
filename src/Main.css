@@ -73,3 +73,11 @@
 .Main #portfolio_list{
     display: none;
 }
+
+.Main .session_title{
+    font-size: 96pt;
+    border-bottom: solid 4px;
+    display: block;
+    margin-bottom: 16px;
+    font-family: 'Noto Sans KR','애플 SD 산돌고딕 Neo', 'Apple SD Gothic Neo','맑은 고딕', 'Malgun Gothic','dotum', 'Helvetica', 'Arial', sans-serif;
+}

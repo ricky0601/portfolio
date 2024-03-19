@@ -3,6 +3,10 @@
 /* Body 스타일 지정 */
 body{
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'Noto Sans KR','애플 SD 산돌고딕 Neo', 'Apple SD Gothic Neo','맑은 고딕', 'Malgun Gothic','dotum', 'Helvetica', 'Arial', sans-serif;
   background-color: #fafafa;
+}
+a{
+  color: unset;
+  text-decoration: none;
 }

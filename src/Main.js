@@ -12,10 +12,19 @@ const Main = () => {
                 >DongGeon's <br/>Portfolio</span>
         </session>
         <h2 id="portfolio_list">
+            <span className='hidden'>자기소개 영역</span>
+        </h2>
+        <session>로고 영역</session>
+        <h2 id="portfolio_list">
             <span className='hidden'>포트폴리오 목록</span>
         </h2>
         <session className="Main_Main">
             <div className="Main_Main_wrap">
+                <span className='session_title'>
+                    <strong>
+                        PROJECT
+                    </strong>
+                </span>
                 <article className='Project_list'>
                     <div className='Project_thumb_wrap'>
                         <a className='Project_thumb' href='/'></a>
@@ -48,7 +57,6 @@ const Main = () => {
                 </article>
             </div>
         </session>
-        <session>로고 영역</session>
         <session>로고 영역</session>
     </div>
 }
