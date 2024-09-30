@@ -1,3 +1,21 @@
+.fadein{
+  font-size: medium;
+  position: relative;
+  overflow: hidden;
+  animation: fadein 7s ease-in-out;
+}
+
+@keyframes fadein{
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 
 .hero-container {
     display: flex;
@@ -7,10 +25,11 @@
     background-color: #282c34;
     color: #ffffff;
     text-align: center;
-    position: relative;
-    /* background-image: url('/path/to/your-image.jpg'); */
+    position: sticky;
+    top: 0;
     background-size: cover;
     background-position: center;
+    z-index: -1;
   }
   
   .hero-container::before {

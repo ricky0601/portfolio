@@ -1,97 +1,215 @@
-/* Header 스타일 지정 */
-
+/* 기본 헤더 스타일 */
 .Header {
     position: fixed;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.3); /* 기본적으로 반투명 */
+    height: 100%;
+    left: 0;
     color: white;
-    backdrop-filter: blur(10px); /* 부드러운 블러 효과 */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 약간의 그림자 추가 */
-    transition: background-color 0.5s ease, color 0.5s ease; /* 스무스한 트랜지션 */
-    z-index: 1000; /* 콘텐츠 위에 나타나도록 z-index 설정 */
-}
-
-.top-bar-down {
-    background-color: rgba(255, 255, 255, 0.95); /* 스크롤 시 거의 불투명하게 */
-    color: black; /* 텍스트는 검은색으로 전환 */
-}
-
-.Header_main {
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.5s ease, color 0.5s ease;
+    z-index: 1000;
+  }
+  .buttonOn{
+    display: none;
+  }
+  .top-bar-down {
+    background-color: rgba(255, 255, 255, 0.95);
+    color: black;
+  }
+  
+  .top-bar-down .menu-icon::before,
+  .top-bar-down .menu-icon::after {
+    background-color: #000;
+  }
+  
+  .Header_main {
+    gap: 10em;
     max-width: 1200px;
     margin: 0 auto;
+    height: 100%;
     display: flex;
-    justify-content: space-between;
+    padding: 30px 60px;
+    flex-direction: column;
     align-items: center;
-    padding: 30px 20px;
-}
+    justify-content: center;
+  }
+  
+  .close_button{
+    position: fixed;
+    bottom: 1em;
+  }
 
-.logoBar {
+  .logoBar {
     font-size: 20px;
-    font-weight: bold; /* 로고를 강조 */
-    color: inherit; /* 부모의 색상 상속 */
-    text-transform: uppercase; /* 대문자로 표시 */
+    font-weight: bold;
+    color: inherit;
+    text-transform: uppercase;
     cursor: pointer;
-}
-
-.menuBar ul {
+  }
+  
+  .menuBar ul {
     display: flex;
     list-style-type: none;
     margin: 0;
     padding: 0;
-}
-
-.menuBar li {
-    margin-left: 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 4em;
+  }
+  
+  .menuBar li a {
     font-size: 16px;
     font-weight: 500;
-    text-transform: uppercase; /* 메뉴 텍스트 대문자로 */
+    text-transform: uppercase;
     letter-spacing: 1px;
     cursor: pointer;
     position: relative;
-}
-
-.menuBar li::after {
+  }
+  
+  .menuBar li a::after {
     content: "";
     position: absolute;
     bottom: -3px;
     left: 0;
     width: 0;
     height: 2px;
-    background-color: black;
-    transition: width 0.3s ease; /* 하단에 밑줄 애니메이션 */
-}
-
-.menuBar li:hover::after {
-    width: 100%; /* 마우스를 올렸을 때 밑줄 생김 */
-}
-
-.menuBar a {
-    color: inherit; /* 부모의 색상 상속 */
+    background-color: #0092E4;
+    transition: width 0.3s ease;
+  }
+  
+  .menuBar li a:hover::after {
+    width: 100%;
+  }
+  
+  .menuBar a {
+    color: inherit;
     text-decoration: none;
-}
+  }
+  
+  .menuBar a:hover {
+    color: #0092E4;
+  }
+  
+  .menu-toggle {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .menu-icon {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  
+  .menu-icon::before,
+  .menu-icon::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+  }
+  
+  .menu-icon::before {
+    top: -8px;
+    right: -1em;
+  }
+  
+  .menu-icon::after {
+    bottom: -8px;
+    right: -1em;
+  }
+  
+  .menu-icon.open {
+    transform: rotate(45deg);
+  }
+  
+  .menu-icon.open::before {
+    transform: rotate(90deg);
+    top: 0;
+  }
+  
+  .menu-icon.open::after {
+    opacity: 0;
+  }
 
-.menuBar a:hover {
-    color: #f39c12; /* 메뉴를 호버할 때 색상 변화 */
-}
-
-@media (max-width: 768px) {
+.btn {
+    display: grid;
+    place-items: center;
+    background: #e3edf7;
+    padding: 0.5em;
+    border-radius: 10px;
+    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
+            -6px -6px 10px -1px rgba(255,255,255,0.7);
+    border: 1px solid rgba(0,0,0,0);
+    cursor: pointer;
+    transition: transform 0.5s;
+  }
+  
+  .btn:hover {
+    box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+            inset -4px -4px 6px -1px rgba(255,255,255,0.7),
+            -0.5px -0.5px 0px rgba(255,255,255,1),
+            0.5px 0.5px 0px rgba(0,0,0,0.15),
+            0px 12px 10px -10px rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.1);
+    transform: translateY(0.5em);
+  }
+  
+  .btn svg {
+    transition: transform 0.5s;
+  }
+  
+  .btn:hover svg {
+    transform: scale(0.9);
+    fill: #333333;
+  }
+  
+  
+  
+  /* 반응형 메뉴 */
+  @media (max-width: 1086px) {
+    .Header{
+        width: 100%;
+        height: auto;
+    }
     .Header_main {
-        flex-direction: column; /* 작은 화면에서 헤더 레이아웃 변경 */
-        padding: 10px 15px;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 20px;
     }
-
+  
+    .menuBar {
+      display: none;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .menuBar.open {
+      display: flex;
+      color: black;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  
     .menuBar ul {
-        flex-direction: column; /* 메뉴가 세로로 나열됨 */
-        align-items: center;
-        margin-top: 10px;
+      gap: 2em;
     }
-
-    .menuBar li {
-        margin-left: 0;
-        margin-bottom: 10px;
+  
+    .menuBar li a {
+      font-size: 18px;
     }
-
-    .menuBar li::after {
-        bottom: -2px; /* 밑줄 위치 조정 */
-    }
-}
+  }
+  
