@@ -27,8 +27,8 @@ const Header = () => {
                     <ul>
                         <a href="#session_title2"><li>PROFILE</li></a>
                         <a href="#session_title"><li>PROJECT</li></a>
-                        <li>3번 메뉴</li>
-                        <li>4번 메뉴</li>
+                        <a href="#session_title"><li>PROJECT</li></a>
+                        <a href="#session_title"><li>PROJECT</li></a>
                     </ul>
                 </div>
             </div>

@@ -1,0 +1,97 @@
+/* Header 스타일 지정 */
+
+.Header {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.3); /* 기본적으로 반투명 */
+    color: white;
+    backdrop-filter: blur(10px); /* 부드러운 블러 효과 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 약간의 그림자 추가 */
+    transition: background-color 0.5s ease, color 0.5s ease; /* 스무스한 트랜지션 */
+    z-index: 1000; /* 콘텐츠 위에 나타나도록 z-index 설정 */
+}
+
+.top-bar-down {
+    background-color: rgba(255, 255, 255, 0.95); /* 스크롤 시 거의 불투명하게 */
+    color: black; /* 텍스트는 검은색으로 전환 */
+}
+
+.Header_main {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 20px;
+}
+
+.logoBar {
+    font-size: 20px;
+    font-weight: bold; /* 로고를 강조 */
+    color: inherit; /* 부모의 색상 상속 */
+    text-transform: uppercase; /* 대문자로 표시 */
+    cursor: pointer;
+}
+
+.menuBar ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menuBar li {
+    margin-left: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase; /* 메뉴 텍스트 대문자로 */
+    letter-spacing: 1px;
+    cursor: pointer;
+    position: relative;
+}
+
+.menuBar li::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.3s ease; /* 하단에 밑줄 애니메이션 */
+}
+
+.menuBar li:hover::after {
+    width: 100%; /* 마우스를 올렸을 때 밑줄 생김 */
+}
+
+.menuBar a {
+    color: inherit; /* 부모의 색상 상속 */
+    text-decoration: none;
+}
+
+.menuBar a:hover {
+    color: #f39c12; /* 메뉴를 호버할 때 색상 변화 */
+}
+
+@media (max-width: 768px) {
+    .Header_main {
+        flex-direction: column; /* 작은 화면에서 헤더 레이아웃 변경 */
+        padding: 10px 15px;
+    }
+
+    .menuBar ul {
+        flex-direction: column; /* 메뉴가 세로로 나열됨 */
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .menuBar li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .menuBar li::after {
+        bottom: -2px; /* 밑줄 위치 조정 */
+    }
+}
