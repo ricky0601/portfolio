@@ -1,6 +1,15 @@
 import React from 'react';
 import './Project.css';
 import { gsap } from 'gsap';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init({
+  duration: 900, 
+  easing: 'ease-in-out', 
+  once: false, 
+});
+
 
 const Project = () => {
   const projects = [
@@ -8,39 +17,38 @@ const Project = () => {
       title: 'Portfolio Website',
       description: 'A personal portfolio website to showcase my projects and skills.',
       technologies: ['React', 'CSS', 'JavaScript'],
-      image: 'portfolio.png',
-      github: 'https://github.com/yourname/portfolio',
-      demo: 'https://yourportfolio.com',
+      image: '/img/portfolio.png',
+      github: 'https://github.com/ricky0601/portfolio',
     },
     {
-      title: 'E-commerce Platform',
-      description: 'A full-stack e-commerce application with shopping cart and payment integration.',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-      image: 'ecommerce.png',
-      github: 'https://github.com/yourname/ecommerce-platform',
-      demo: 'https://yourecommerce.com',
+      title: 'Flenders',
+      description: 'An AI-powered camera app to assist low-vision individuals with offline shopping',
+      technologies: ['React Native', 'Node.js', 'GCP'],
+      image: '/img/1912804.png',
+      github: 'https://github.com/ricky0601/Flenders',
     },
   ];
 
   const handleMouseEnter = (e) => {
-    gsap.to(e.currentTarget, { scale: 1.05, duration: 0.3 });
+    gsap.to(e.currentTarget, { scale: 1.05, duration: 0.1 });
   };
 
   const handleMouseLeave = (e) => {
-    gsap.to(e.currentTarget, { scale: 1, duration: 0.3 });
+    gsap.to(e.currentTarget, { scale: 1, duration: 0.1 });
   };
 
   return (
     <section id="PROJECT" className="project-section" aria-labelledby="projects-heading">
-      <h2 id="projects-heading">Projects</h2>
+      <h2 data-aos="fade-left" id="projects-heading">Projects</h2>
       <div className="project-list">
         {projects.map((project, index) => (
           <div
+             data-aos="fade-up"
             className="project-item"
             key={index}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
-            tabIndex={0} // 키보드 접근성을 위해 포커스 가능
+            tabIndex={0}
             aria-label={`${project.title} project`}
           >
             <img
@@ -57,9 +65,6 @@ const Project = () => {
               <div className="project-links">
                 <a href={project.github} target="_blank" rel="noopener noreferrer">
                   GitHub
-                </a>
-                <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                  Live Demo
                 </a>
               </div>
             </div>

@@ -12,7 +12,7 @@ AOS.init({
 const Header = () => {
   const [isTopBarDown, setIsTopBarDown] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isButtonOpen, setIsButtonOpen] = useState(false);
+  // const [isButtonOpen, setIsButtonOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,12 +34,13 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const buttonMenu = () => {
-    setIsButtonOpen(!isButtonOpen);
-  }
+  // const buttonMenu = () => {
+  //   setIsButtonOpen(!isButtonOpen);
+  // }
 
   return (
-    <div className={`Header ${isTopBarDown ? 'top-bar-down' : ''} ${isButtonOpen ? 'buttonOn' : ''}`}>
+    <div className={`Header ${isTopBarDown ? 'top-bar-down' : ''} `}>
+      {/* ${isButtonOpen ? 'buttonOn' : ''} */}
       <div className="Header_main">
         <div data-aos="fade-right" className="logoBar">DongGeon</div>
         <div className={`menuBar ${isMenuOpen ? 'open' : ''}`}>
@@ -61,7 +62,7 @@ const Header = () => {
         <div className="menu-toggle" onClick={toggleMenu}>
           <span className={`menu-icon ${isMenuOpen ? 'open' : ''}`}></span>
         </div>
-        <div className='close_button' onClick={buttonMenu}>닫기 버튼</div>
+        {/* <div className='close_button' onClick={buttonMenu}>닫기 버튼</div> */}
       </div>
     </div>
   );

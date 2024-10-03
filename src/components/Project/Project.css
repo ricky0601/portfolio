@@ -5,9 +5,8 @@
     padding-top: 40px;
     padding-bottom: 40px;
     padding-right: 40px;
-    height: 85vh;
-    position: sticky;
-    top: 15vh;
+    height: 100vh;
+    top: 70px;
   }
   
   .project-list {
@@ -15,7 +14,11 @@
     flex-wrap: wrap;
     justify-content: space-around;
   }
-  
+  #projects-heading{
+    text-align: right;
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    margin-right: 5em;
+  }
   .project-item {
     width: 300px;
     margin: 20px;
@@ -40,6 +43,10 @@
   
   .project-info {
     text-align: left;
+  }
+
+  .project-links{
+    text-align: center;
   }
   
   .project-links a {

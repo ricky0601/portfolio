@@ -15,8 +15,6 @@
     transform: none;
   }
 }
-
-
 .hero-container {
     display: flex;
     align-items: center;
@@ -25,7 +23,6 @@
     background-color: #282c34;
     color: #ffffff;
     text-align: center;
-    position: sticky;
     top: 0;
     background-size: cover;
     background-position: center;
