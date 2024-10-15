@@ -1,0 +1,38 @@
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.wrap_header{
+    max-width: 1280px;
+    margin: 0 auto;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo_area{
+}
+
+.logo_style{
+    font-family: Island Moments;
+    font-size: 64px;
+    position: relative;
+
+    .logo_shadow{
+        position: absolute;
+        top: 5px;
+        right: -5px;
+        color: #845E86;
+    }
+}
+
+.menu_area{
+    ul{
+        display: flex;
+        gap: 133px;
+    }
+}

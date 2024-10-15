@@ -1,0 +1,13 @@
+#ContactBar {
+    position: fixed;
+    z-index: 10;
+    bottom: 20px;
+    left: 20px;
+
+    .bar_background{
+        width: 60px;
+        height: 160px;
+        border-radius: 32px;
+        background-color: #FAE7FF;
+    }
+}

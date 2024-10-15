@@ -1,0 +1,41 @@
+#AboutMe{
+    max-width: 1280px;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .wrap_title{
+        line-height: unset;
+
+        .Main_title{
+            font-size: 55px;
+            font-weight: 700;
+            color: #F6D1FF;
+        }
+
+        .Sub_title{
+            font-size: 55px;
+            color: #FAE7FF;
+        }
+
+        .wrap_contect{
+            padding-top: 2em;
+            .address{
+                height: 50px;
+
+                a{
+                    display: flex;
+                    align-items: center;
+                    gap: 17px;
+                }
+            }
+        }
+    }
+
+    .wrap_desc{
+        font-size: 20px;
+        max-width: 600px;
+    }
+}

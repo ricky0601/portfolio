@@ -1,12 +1,45 @@
-/* root 스타일 지정 */
-
-/* Body 스타일 지정 */
-body{
-  margin: 0;
-  font-family: 'Noto Sans KR','애플 SD 산돌고딕 Neo', 'Apple SD Gothic Neo','맑은 고딕', 'Malgun Gothic','dotum', 'Helvetica', 'Arial', sans-serif;
-  background-color: #fafafa;
+.nanum-gothic-regular {
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
+
+.nanum-gothic-bold {
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.nanum-gothic-extrabold {
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+
+body{
+  font-family: "Nanum Gothic", sans-serif;
+  background-color: #312431;
+  color: #FAE7FF;
+  font-size: 20px;
+  height: 1000px;
+}
+
 a{
   color: unset;
   text-decoration: none;
+}
+
+a:visited{
+  color: unset;
+}
+
+ul, li{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h2, h3, h4, p, span{
+  margin: 0;
 }
