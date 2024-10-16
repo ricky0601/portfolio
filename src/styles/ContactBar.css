@@ -9,5 +9,24 @@
         height: 160px;
         border-radius: 32px;
         background-color: #FAE7FF;
+
+        .wrap_icon{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+            justify-content: center;
+            gap: 24px;
+
+            img{
+                width: 100%;
+            }
+            .icon_item{
+                width: 32px;
+                .githubIcon{
+                    filter: invert(8%) sepia(4%) saturate(2790%) hue-rotate(174deg) brightness(99%) contrast(87%);
+                }
+            }
+        }
     }
 }

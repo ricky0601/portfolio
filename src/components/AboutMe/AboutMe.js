@@ -1,10 +1,5 @@
 import React from "react";
 
-const link = [
-    {},
-    {},
-
-]
 
 const AboutMe = () =>{
     return <article id="AboutMe">
@@ -14,13 +9,13 @@ const AboutMe = () =>{
             <div className="wrap_contect">
                 <p className="address">
                     <a href="https://github.com/ricky0601" target="_blank" rel="noreferrer">
-                        <img src="/img/github_icon.png"></img>
+                        <img src="/img/github_icon.png" alt="Github Logo"></img>
                         github.com/ricky0601
                     </a>
                 </p>
                 <p className="address">
                     <a href="https://velog.io/@ricky0601/posts" target="_blank" rel="noreferrer">
-                        <img src="/img/velog_icon.png"></img>
+                        <img src="/img/velog_icon.png" alt="Velog Logo"></img>
                         velog.com/ricky0601
                     </a>
                 </p>
@@ -60,6 +55,7 @@ const AboutMe = () =>{
                 더욱 넓고 깊게 기술을 탐구하며 나아가겠습니다.
             </p>
         </div>
+        <div className="scroll-indicator"></div>
     </article>
 }
 
