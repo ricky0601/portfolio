@@ -1,35 +1,40 @@
-import React,{useState, useEffect} from "react";
+import React, { useState, useEffect, useRef } from "react";
 
-const TopButton = () =>{
+const TopButton = () => {
     const [isTopButtonOn, setIsTopButtonOn] = useState(false);
-
-    const $topBtn = document.querySelector(".toTop");
-
-    $topBtn.onclick = () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });  
-    }
+    const topBtnRef = useRef(null);
 
     useEffect(() => {
-        const handleScroll = () => {
-        if (document.documentElement.scrollTop > 0) {
-            setIsTopButtonOn(true);
-        } else {
-            setIsTopButtonOn(false);
-        }
+        const handleScrollToTop = () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
         };
 
-        document.addEventListener('scroll', handleScroll);
+        if (topBtnRef.current) {
+            topBtnRef.current.onclick = handleScrollToTop;
+        }
+
+        const handleScroll = () => {
+            if (document.documentElement.scrollTop > 0) {
+                setIsTopButtonOn(true);
+            } else {
+                setIsTopButtonOn(false);
+            }
+        };
+
+        document.addEventListener("scroll", handleScroll);
 
         return () => {
-        document.removeEventListener('scroll', handleScroll);
+            document.removeEventListener("scroll", handleScroll);
         };
     }, []);
 
-    return <div className={`wrap_topButton ${isTopButtonOn ? 'show' : ''}`}>
-        <div className="toTop">
-            <img src="/img/top_button.png" alt="topButton"></img>
+    return (
+        <div className={`wrap_topButton ${isTopButtonOn ? "show" : ""}`}>
+            <div className="toTop" ref={topBtnRef}>
+                <img src="/img/top_button.png" alt="topButton" />
+            </div>
         </div>
-    </div>
-}
+    );
+};
 
 export default TopButton;

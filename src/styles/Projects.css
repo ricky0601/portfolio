@@ -1,0 +1,58 @@
+#Projects{
+    height: 100vh;
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .wrap_title > .title_style{
+        font-size: 52px;
+        font-weight: 600;
+    }
+
+    .wrap_list{
+        margin-top: 46px;
+        margin-bottom: 46px;
+        display: flex;
+        justify-content: space-between;
+
+        .wrap_txt{
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            line-height: 1.5;
+
+            .title_area > h3{
+                font-size: 44px;
+                color: #F6D1FF;
+                font-weight: 500;
+            }
+
+            .dura_area > p{
+                font-size: 24px;
+            }
+            .desc_area{
+                margin-top: 30px;
+
+                p{
+                    font-size: 28px;
+                }
+            }
+
+            .stack_area{
+                margin-top: 30px;
+
+                p{
+                    font-size: 28px;
+                }
+            }
+        }
+
+        .wrap_img{
+            width: 500px;
+            height: 500px;
+        }
+    }
+}

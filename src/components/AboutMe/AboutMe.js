@@ -5,7 +5,7 @@ const AboutMe = () =>{
     return <article id="AboutMe">
         <div className="wrap_title">
             <h1 className="Main_title">FrontEnd Develper,</h1>
-            <p className="Sub_title">한동건</p>
+            <p className="Sub_title">한 동 건</p>
             <div className="wrap_contect">
                 <p className="address">
                     <a href="https://github.com/ricky0601" target="_blank" rel="noreferrer">

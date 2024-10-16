@@ -18,7 +18,7 @@ const HeaderCompoent = () =>{
                         <a href="#Skills">Skills</a>
                     </li>
                     <li>
-                        <a href="#Project">Project</a>
+                        <a href="#Projects">Project</a>
                     </li>
                 </ul>
             </div>
