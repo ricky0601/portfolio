@@ -1,6 +1,6 @@
 #Skills{
     max-width: 1280px;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -17,6 +17,15 @@
         flex-wrap: wrap;
         justify-content: center;
         margin: 0 auto;
+
+        > div{
+            transition-duration: 0.6s;
+        }
+
+        > div:hover{
+            scale: 1.1;
+            transition-duration: 0.6s;
+        }
 
         .single_stacks{
             display: flex;

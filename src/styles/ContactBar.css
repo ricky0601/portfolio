@@ -6,9 +6,7 @@
 
     .bar_background{
         width: 60px;
-        height: 160px;
         border-radius: 32px;
-        background-color: #FAE7FF;
 
         .wrap_icon{
             display: flex;
@@ -22,11 +20,109 @@
                 width: 100%;
             }
             .icon_item{
-                width: 32px;
-                .githubIcon{
-                    filter: invert(8%) sepia(4%) saturate(2790%) hue-rotate(174deg) brightness(99%) contrast(87%);
-                }
+                width: 40px;
             }
         }
     }
+    button {
+        font-family: inherit;
+        font-size: 20px;
+        background: #ffffff00;
+        color: white;
+        padding: 0.7em 1em;
+        padding-left: 0.9em;
+        display: flex;
+        align-items: center;
+        border: none;
+        border-radius: 16px;
+        overflow: hidden;
+        transition: all 0.2s;
+        cursor: pointer;
+      }
+      
+      button span {
+        display: block;
+        margin-left: 0.3em;
+        transition: all 0.3s ease-in-out;
+      }
+      
+      button svg {
+        display: block;
+        transform-origin: center center;
+        transition: transform 0.3s ease-in-out;
+      }
+      
+      button:hover .svg-wrapper {
+        animation: fly-1 0.6s ease-in-out infinite alternate;
+      }
+      
+      button:hover svg {
+        transform: rotate(45deg) scale(1.1);
+      }
+      
+      button:hover span {
+        transform: translateX(5em);
+      }
+      
+      button:active {
+        transform: scale(0.95);
+      }
+      
+      @keyframes fly-1 {
+        from {
+          transform: translateY(0.1em);
+        }
+      
+        to {
+          transform: translateY(-0.1em);
+        }
+      }
 }
+
+
+.tooltip1 {
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    border-radius: 50px;
+    transition: opacity 0.3s, visibility 0.3s, top 0.3s, background 0.3s;
+    z-index: 1;
+  }
+  
+  .tooltip-container:hover .tooltip1 {
+    top: -100%;
+    opacity: 1;
+    visibility: visible;
+    border-radius: 50px;
+    transform: translate(-50%, -5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .tooltip2{
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    border-radius: 50px;
+    transition: opacity 0.3s, visibility 0.3s, top 0.3s, background 0.3s;
+    z-index: 1;
+  }
+  
+  .tooltip-container:hover .tooltip2 {
+    top: -200%;
+    opacity: 1;
+    visibility: visible;
+    border-radius: 50px;
+    transform: translate(-50%, -5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }

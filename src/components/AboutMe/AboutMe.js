@@ -1,10 +1,11 @@
 import React from "react";
 
-
 const AboutMe = () =>{
     return <article id="AboutMe">
         <div className="wrap_title">
-            <h1 className="Main_title">FrontEnd Develper,</h1>
+            <h1 className="Main_title">
+                FrontEnd Developer,
+            </h1>
             <p className="Sub_title">한 동 건</p>
             <div className="wrap_contect">
                 <p className="address">
@@ -32,7 +33,7 @@ const AboutMe = () =>{
                 개발에 대한 관심사를 폭넓게 확장하고 있습니다.
                 <br />
                 <br />
-                "시작을 두려워하면, 절반도 못한다."
+                <strong>"시작을 두려워하면, 절반도 못한다."</strong>
                 <br />
                 <br />
                 이 문장은 항상 제 자신에게 되새기며
