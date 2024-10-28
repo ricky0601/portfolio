@@ -4,33 +4,16 @@
   "private": true,
   "dependencies": {
     "@studio-freight/lenis": "^1.0.42",
-<<<<<<< Updated upstream
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-=======
-    "@testing-library/jest-dom": "^6.6.2",
-    "@testing-library/react": "^16.0.1",
-    "@testing-library/user-event": "^14.5.2",
-    "@types/jest": "^29.5.14",
-    "@types/node": "^22.8.1",
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
->>>>>>> Stashed changes
     "gsap": "^3.12.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.27.0",
     "react-scripts": "5.0.1",
-<<<<<<< Updated upstream
     "sass": "^1.79.5",
     "web-vitals": "^2.1.4"
-=======
-    "react-typed": "^2.0.12",
-    "sass": "^1.80.4",
-    "typescript": "^5.6.3",
-    "web-vitals": "^4.2.4"
->>>>>>> Stashed changes
   },
   "scripts": {
     "start": "react-scripts start",
