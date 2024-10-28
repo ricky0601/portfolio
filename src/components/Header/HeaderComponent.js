@@ -15,10 +15,10 @@ const HeaderCompoent = () =>{
                         <a href="#AboutMe">About me</a>
                     </li>
                     <li>
-                        <a href="#Skills">Skills</a>
+                        <a href="#Projects">Project</a>
                     </li>
                     <li>
-                        <a href="#Projects">Project</a>
+                        <a href="#Skills">Skills</a>
                     </li>
                 </ul>
             </div>

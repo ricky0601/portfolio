@@ -1,10 +1,12 @@
 #Projects{
-    height: 100vh;
+    min-height: 100vh;
     max-width: 1280px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
 
     .wrap_title > .title_style{
         font-size: 52px;
@@ -18,6 +20,7 @@
         justify-content: space-between;
 
         .wrap_txt{
+            max-width: 640px;
             height: 500px;
             display: flex;
             flex-direction: column;
@@ -37,22 +40,61 @@
                 margin-top: 30px;
 
                 p{
-                    font-size: 28px;
+                    font-size: 20px;
+                    line-height: 2;
                 }
             }
 
             .stack_area{
                 margin-top: 30px;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1em;
 
-                p{
-                    font-size: 28px;
+                button{
+                    font-size: 16px;
+                    color: #FAE7FF;
+                    border: 1px solid #F6D1FF;
+                    border-radius: 30px;
+                    background-color: unset;
+                    padding: 8px 16px;
+                    cursor: pointer;
                 }
+            }
+            .link_area{
+                margin-top: 30px;
             }
         }
 
         .wrap_img{
             width: 500px;
             height: 500px;
+            align-content: center;
+            position: relative;
+
+            div{
+                width: 1000px;
+                height: 500px;
+                position: absolute;
+                top: 0;
+                background: #7f7f7f1a;
+                right: -50px;
+                border-radius: 30px;
+                filter: blur(4px);
+            }
+            img{
+                width: 100%;
+                filter: grayscale(1);
+                transition-duration: 0.3s;
+                border-radius: 50px;
+            }
+            img:hover{
+                filter: grayscale(0);
+                transition-duration: 0.6s;
+                scale: 1.1;
+            }
         }
     }
+
+    
 }

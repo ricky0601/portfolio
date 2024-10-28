@@ -1,39 +1,110 @@
-header{
+header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-}
-
-.wrap_header{
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.5s ease, color 0.5s ease;
+    z-index: 1000;
+    padding: 0 20px;
+  }
+  
+  .wrap_header {
     max-width: 1280px;
     margin: 0 auto;
-    height: 100px;
+    height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.logo_area{
-}
-
-.logo_style{
-    font-family: Island Moments;
-    font-size: 64px;
+  }
+  
+  .logo_style {
+    font-family: 'Island Moments', cursive;
+    font-size: 40px;
     position: relative;
-
-    .logo_shadow{
-        position: absolute;
-        top: 5px;
-        right: -5px;
-        color: #845E86;
-        line-height: 1;
+  
+    .logo_shadow {
+      position: absolute;
+      top: 5px;
+      right: -5px;
+      color: #845E86;
+      line-height: 1;
     }
-}
-
-.menu_area{
-    ul{
-        display: flex;
-        gap: 133px;
+  }
+  
+  .menu_area ul {
+    display: flex;
+    gap: 50px;
+  }
+  
+  .menu_area ul li a {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .menu_area ul li a:hover {
+    color: #845E86;
+  }
+  
+  /* 태블릿 이상 (768px 이상) */
+  @media (min-width: 768px) {
+    .wrap_header {
+      height: 100px;
     }
-}
+  
+    .logo_style {
+      font-size: 48px;
+    }
+  
+    .menu_area ul {
+      gap: 80px;
+    }
+  
+    .menu_area ul li a {
+      font-size: 20px;
+    }
+  }
+  
+  /* 데스크탑 이상 (1024px 이상) */
+  @media (min-width: 1024px) {
+    .logo_style {
+      font-size: 64px;
+    }
+  
+    .menu_area ul {
+      gap: 133px;
+    }
+  
+    .menu_area ul li a {
+      font-size: 24px;
+    }
+  }
+  
+  /* 모바일 (768px 이하) */
+  @media (max-width: 767px) {
+    header{
+        display: none;
+    }
+    .wrap_header {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    .logo_style {
+      font-size: 32px;
+    }
+  
+    .menu_area ul {
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 10px;
+    }
+  
+    .menu_area ul li a {
+      font-size: 16px;
+    }
+  }
+  
