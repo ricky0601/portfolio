@@ -21,7 +21,10 @@
     <meta name="twitter:description" content="React, TypeScript, Vue. 사용자 경험과 코드 품질을 생각하는 프론트엔드 개발자 한동건의 포트폴리오입니다." />
   </head>
   <body>
-    <script>window.global = window.globalThis || window;</script>
+    <script>
+      window.global = window.globalThis || window;
+      window.require = window.require || function() {};
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
