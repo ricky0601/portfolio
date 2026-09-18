@@ -37,7 +37,10 @@ React 19, TypeScript, Vite와 plain CSS로 구성하며 추가 UI·애니메이�
 - `src/index.css`: 전역 스타일, 접근성 기본값, 글꼴
 - `src/App.css`: 페이지 디자인과 반응형 레이아웃
 - `src/assets/`: 실제 프로젝트 화면과 프로필 사진
-- `index.html`: 한국어 SEO·Open Graph·canonical 메타데이터
+- `index.html`: 한국어 SEO, Open Graph·Twitter 카드, canonical, Person 구조화 데이터
+- `public/favicon.svg`, `public/favicon.ico`: 브라우저 파비콘
+- `public/apple-touch-icon.png`, `public/icon-*.png`, `public/site.webmanifest`: 모바일·설치 아이콘
+- `public/og-image.png`: 링크 공유용 1200×630 미리보기 이미지
 - `public/han-donggeon-resume.pdf`: 웹에서 열람하는 공개 이력서
 - `public/sitemap.xml`, `public/robots.txt`: 기존 배포 도메인 유지
 

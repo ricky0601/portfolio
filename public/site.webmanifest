@@ -1,0 +1,22 @@
+{
+  "name": "한동건 | 프론트엔드 개발자 포트폴리오",
+  "short_name": "한동건 Portfolio",
+  "description": "서비스 개발·운영 경험을 소개하는 프론트엔드 개발자 한동건의 포트폴리오",
+  "lang": "ko-KR",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7f6f0",
+  "theme_color": "#4d6445",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
