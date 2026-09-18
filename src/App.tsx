@@ -1,71 +1,36 @@
-import { useState, useRef, useCallback } from "react";
-import ReactPageScroller from "react-page-scroller";
-import { SectionContainer } from "react-page-scroller";
-import { ProjectsScrollContext } from "./contexts/ProjectsScrollContext";
 import HeroSection from "./components/HeroSection";
-import AboutSection from "./components/AboutSection";
-import SkillsSection from "./components/SkillsSection";
 import ProjectsSection from "./components/ProjectsSection";
+import SkillsSection from "./components/SkillsSection";
+import AboutSection from "./components/AboutSection";
 import ContactSection from "./components/ContactSection";
-
-const PROJECTS_PAGE_INDEX = 3;
-const ANIMATION_DURATION = 600;
-const ANIMATION_BUFFER = 250;
+import "./App.css";
 
 export default function App() {
-  const [currentPage, setCurrentPage] = useState(0);
-  const [blockScroll, setBlockScroll] = useState(false);
-  const [projectsScrollState, setProjectsScrollState] = useState({ atStart: true, atEnd: true });
-  const blockTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-
-  const handleBeforePageScroll = useCallback(() => {
-    if (blockTimerRef.current) clearTimeout(blockTimerRef.current);
-    setBlockScroll(true);
-    blockTimerRef.current = setTimeout(() => {
-      setBlockScroll(false);
-      blockTimerRef.current = null;
-    }, ANIMATION_DURATION + ANIMATION_BUFFER);
-  }, []);
-
-  const blockScrollDown =
-    blockScroll || (currentPage === PROJECTS_PAGE_INDEX && !projectsScrollState.atEnd);
-  const blockScrollUp =
-    blockScroll || (currentPage === PROJECTS_PAGE_INDEX && !projectsScrollState.atStart);
-
   return (
     <>
-      <ProjectsScrollContext.Provider value={{ setScrollState: setProjectsScrollState }}>
-        <div className="app-scroller" role="main">
-          <ReactPageScroller
-            containerHeight="100vh"
-            containerWidth="100vw"
-            animationTimer={ANIMATION_DURATION}
-            animationTimerBuffer={ANIMATION_BUFFER}
-            transitionTimingFunction="ease-in-out"
-            pageOnChange={setCurrentPage}
-            onBeforePageScroll={handleBeforePageScroll}
-            blockScrollDown={blockScrollDown}
-            blockScrollUp={blockScrollUp}
-            renderAllPagesOnFirstRender
-          >
-          <SectionContainer height={100}>
-            <HeroSection />
-          </SectionContainer>
-          <SectionContainer height={100}>
-            <AboutSection />
-          </SectionContainer>
-          <SectionContainer height={100}>
-            <SkillsSection />
-          </SectionContainer>
-          <SectionContainer height={100}>
-            <ProjectsSection />
-          </SectionContainer>
-          <SectionContainer height={100}>
-            <ContactSection />
-          </SectionContainer>
-          </ReactPageScroller>
+      <a className="skip-link" href="#main-content">본문으로 건너뛰기</a>
+      <header className="site-header">
+        <div className="header-inner">
+          <a className="wordmark" href="#top" aria-label="한동건, 처음으로">한동건<span aria-hidden="true">.</span></a>
+          <nav aria-label="주요 메뉴">
+            <a href="#work">프로젝트</a>
+            <a href="#about">소개</a>
+            <a href="#contact">연락하기 <span aria-hidden="true">↗</span></a>
+          </nav>
         </div>
-      </ProjectsScrollContext.Provider>
+      </header>
+      <main id="main-content" tabIndex={-1}>
+        <HeroSection />
+        <ProjectsSection />
+        <SkillsSection />
+        <AboutSection />
+        <ContactSection />
+      </main>
+      <footer className="site-footer page-width">
+        <span>© {new Date().getFullYear()} 한동건</span>
+        <span>이해하기 쉽게, 믿고 쓸 수 있게.</span>
+        <a href="#top">맨 위로 ↑</a>
+      </footer>
     </>
   );
 }

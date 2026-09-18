@@ -1,38 +1,7 @@
-import "./ContactSection.css";
-
 export default function ContactSection() {
   return (
-    <section id="contact" className="contact-section page-section" aria-label="연락처">
-      <div className="section-inner">
-        <h2 className="section-title">Contact</h2>
-        <p className="contact-intro">
-          협업·문의가 필요하시면 아래로 연락 주세요.
-        </p>
-        {/* 이메일·LinkedIn·이력서 링크는 실제 URL로 교체하세요 */}
-        <div className="contact-links">
-          <a href="mailto:movegun0601@email.com" className="contact-link" aria-label="이메일 보내기">
-            movegun0601@email.com
-          </a>
-          <a
-            href="https://github.com/ricky0601"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="contact-link"
-            aria-label="GitHub 프로필"
-          >
-            GitHub
-          </a>
-          <a
-            href="https://velog.io/@ricky0601/posts"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="contact-link"
-            aria-label="Velog 링크"
-          >
-            Velog
-          </a>
-        </div>
-      </div>
+    <section className="contact-section" id="contact" aria-labelledby="contact-title">
+      <div className="page-width"><p className="eyebrow">04 / LET’S TALK</p><div className="contact-heading"><h2 id="contact-title">다음에 만들 경험을<br />함께 이야기해요.</h2><span className="contact-arrow" aria-hidden="true">↗</span></div><p>채용이나 협업에 관한 이야기를 기다립니다.</p><a className="contact-email" href="mailto:movegun0601@gmail.com">movegun0601@gmail.com <span aria-hidden="true">↗</span></a><div className="contact-socials"><a href="/han-donggeon-resume.pdf" target="_blank" rel="noopener noreferrer">이력서 PDF ↗<span className="sr-only"> (새 탭)</span></a><a href="https://github.com/ricky0601" target="_blank" rel="noopener noreferrer">GitHub ↗<span className="sr-only"> (새 탭)</span></a><a href="https://velog.io/@ricky0601/posts" target="_blank" rel="noopener noreferrer">Velog ↗<span className="sr-only"> (새 탭)</span></a></div></div>
     </section>
   );
 }
